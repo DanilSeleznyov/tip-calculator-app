@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo"><img src="images\logo.svg" alt="" /></div>
+      <div class="content_wrapper">
+        <div class="assets">
+          <p class="label">Bill</p>
+          <input type="number" class="input bill" placeholder="0" oninput="checkInputs()"/>
+          <p class="label">Select Tip %</p>
+          <div class="tip_size">
+            <div class="tip_item" id="0">5%</div>
+            <div class="tip_item" id="1">10%</div>
+            <div class="tip_item" id="2">15%</div>
+            <div class="tip_item" id="3">25%</div>
+            <div class="tip_item" id="4">50%</div>
+            <input class="tip_item_custom" oninput="checkInputs(), removeClass(), getInputTip()" placeholder="Custom">
+          </div>
+          <div class="text_wrapper">
+            <p class="label">Number of People </p><p class="empty_error error">Can't be zero</p>
+          </div>
+          <input type="number" class="input people" placeholder="0" oninput="checkInputs()"/>
+        </div>
+        <div class="results_wrapper">
+          <div class="results">
+            <div class="text">
+              <p>Tip Amount<br /><span>/ person</span></p>
+              <p>Total<br /><span>/ person</span></p>
+            </div>
+            <div class="numbers">
+              <div class="tip_amount_wrapper">
+                $<span class="tip_amount">0</span>
+              </div>
+              <div class="total_wrapper">$<span class="total">0</span></div>
+            </div>
+          </div>
+          <button class="reset" onclick="reset()">RESET</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/DanilSeleznyov">Seleznyov Danil</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

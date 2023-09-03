@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+.container {
+    background: hsl(185, 41%, 84%);
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+    padding: 160px;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+.assets {
+    color: hsl(186, 14%, 43%);
+}
+
+.content_wrapper {
+    position: relative;
+    background: #fff;
+    display: flex;
+    gap: 50px;
+    padding: 45px;
+    border-radius: 26px;
+}
+
+.results_wrapper {
+    background: hsl(183, 100%, 15%);
+    padding: 40px 25px 25px 25px;
+    border-radius: 12px;
+}
+
+.results {
+    display: flex;
+    gap: initial;
+}
+
+.tip_size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 305px;
+}
+
+.tip_item {
+    padding: 10px;
+    background: hsl(183, 100%, 15%);
+    font-size: 24px;
+    border-radius: 7px;
+    color: #fff;
+    width: 95px;
+    text-align: center;
+}
+
+.tip_item_custom {
+    background: hsl(189, 41%, 97%);
+    border: none;
+    color: hsl(183, 94%, 12%);
+    font-size: 22px;
+    border-radius: 7px;
+    width: 95px;
+    padding: 10px;
+    text-align: right;
+}
+
+.tip_item:hover{
+    background: hsl(172, 66%, 44%);
+}
+
+.input {
+    background: #ececec;
+    border: none;
+    height: 45px;
+    width: 305px;
+    font-size: 24px;
+    padding:0 10px 0 10px;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+    text-align: right;
+}
+
+.input::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+.bill {
+    background: url(/images/icon-dollar.svg) 10px no-repeat;
+    background-color: #f0f0f0;
+
+}
+
+.people {
+    background: url(/images/icon-person.svg) 10px no-repeat;
+    background-color: #f0f0f0;
+
+}
+
+.label {
+    margin: 30px 0 10px;
+}
+
+.label:first-child {
+    margin: 10px 0 10px;
+}
+
+.selected{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.text{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 7px;
+}
+
+.text span{
+    color: hsl(186, 14%, 43%);
+    font-size: 15px;
+}
+
+.reset{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 19px;
+    width: 320px;
+    font-family: 'Space Mono', monospace;
+    margin-top: 145px;
+
+}
+
+.reset:hover{
+    background: hsl(172, 66%, 44%);
+}
+
+.reset:active{
+    background: hsl(172, 65%, 38%);
+}
+
+.numbers{
+    text-align: right;
+    font-size: 45px;
+    color: hsl(172, 67%, 45%);
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    width: 220px;
+}
+
+.custom::placeholder{
+    letter-spacing: 0.05px;
+}
+
+
+.error{
+    color: rgb(255, 91, 91);
+}
+
+.empty_error{
+    margin: 16px 0 0 38px;
+    display: none;
+}
+
+.text_wrapper{
+    display: flex;
+}
+
+@media screen and (max-width:825px){
+    .content_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .reset{
+        margin-top: 80px;
+    }
+
+}
+@media screen and (max-width:725px){
+    .container{
+        padding: 100px;
+    }
+}
+@media screen and (max-width:625px){
+    .container{
+        padding:100px 60px 60px 60px;
+    }
+}
+
+@media screen and (max-width:525px){
+    .container{
+        padding: 100px 0 0 0;
+    }
+
+    .content_wrapper{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media screen and (max-width:375px){
+    .reset{
+        width: 280px;
+    }
+    .numbers{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:325px){
+    .input{
+        width: 265px;
+    }
+    .tip_size{
+        justify-content: center;
+    }
+
+    .reset{
+        width: 240px;
+    }
+
+    .container{
+        padding: 75px 0 0 0;
+        gap: 35px;
+    }
+
+    .empty_error{
+        margin: 16px 0 0 8px;
+    }
+}
